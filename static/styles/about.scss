@@ -1,0 +1,73 @@
+@import "common";
+
+.about {
+  margin: $header-height $space-8 0;
+  padding: $space-12 $space-8 $space-8;
+
+  &__title {
+    padding-left: $space-8;
+    text-align: left;
+    text-transform: uppercase;
+
+    h2 {
+      margin: 0;
+    }
+  }
+
+  &__row {
+    display: flex;
+  }
+
+  &__column {
+    padding: $space-8;
+
+    h4 {
+      color: $covid-organge;
+      text-align: left;
+    }
+  }
+
+  &__paragraph {
+    font-size: 20px;
+    text-align: justify;
+
+    a {
+      color: $covid-organge;
+      font-weight: bold;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+
+  .about {
+    margin: $header-height 0 $space-4;
+    padding: $space-8 $space-2;
+
+    &__title {
+      font-size: 6vw;
+      padding-left: 0;
+    }
+
+    &__row {
+      flex-direction: column;
+    }
+
+    &__column {
+      padding: 0;
+
+      h4 {
+        font-size: 6.2vw;
+      }
+    }
+
+    &__paragraph {
+      line-height: 1.6rem;
+    }
+  }
+}

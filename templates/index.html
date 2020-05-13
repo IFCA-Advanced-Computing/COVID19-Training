@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="{{ g.language }}">
+  <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163995430-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-163995430-1');
+</script>
+
+    {% block head %}
+    {% assets "scss_all" %}
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/main.css') }}">
+    {% endassets %}
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://xray.covid.ifca.es" />
+    <meta property="og:image" content="{{ url_for('static',filename='assets/open_graph_img_es.png') }}"/>
+    <link rel="stylesheet" href="https://www.jose-aguilar.com/scripts/jquery/zoomy/zoomy.css"/>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static',filename='assets/favicon.ico') }}"/>
+    <title>{% block title %}{% endblock %} - Covid-19 Training</title>
+    <meta name="viewport" content="width=device-width">
+    <meta charset="UTF-8"/>
+    {% endblock %}
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <div class="content__wrapper">
+        {% block content %}
+        {% endblock %}
+      </div>
+      {% include "snippets/footer.html" %}
+    </div>
+  </body>
+</html>

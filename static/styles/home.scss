@@ -1,0 +1,210 @@
+@import "common";
+
+.home {
+  background-color: $covid-black;
+  margin: 0 auto;
+
+  &__container {
+    background-color: $covid-dark-gray;
+    border-bottom: 2px solid $covid-gray;
+    padding-top: $space-8;
+    padding-top: 2.9vh;
+  }
+
+  &__lang {
+    align-items: center;
+    color: $covid-organge;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: $space-4;
+    position: absolute;
+    right: 0;
+    top: $space-3;
+
+    a {
+      color: $covid-organge;
+      font-size: 18px;
+    }
+
+    img {
+      height: 18px;
+    }
+  }
+
+  &__title {
+    color: $covid-organge;
+    font-size: 2.5vw;
+    margin: $space-10 auto 0;
+    margin: 3vh auto 0;
+    text-transform: uppercase;
+  }
+
+  .main {
+    background-color: $covid-dark-gray;
+  }
+
+  &__section {
+    position: relative;
+  }
+
+  &__row {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 90%;
+
+    .first {
+      margin: $space-8;
+    }
+  }
+
+  &__paragraph {
+    font-size: 1.2vw;
+    margin: 4rem auto $space-12;
+    margin: 5.9vh auto 4.4vh;
+    width: 78%;
+  }
+
+  &__button, &__info {
+    margin-bottom: $space-10;
+    margin-bottom: 3.7vh;
+    padding: 0 8%;
+    text-align: right;
+    width: 50%;
+
+    button {
+      float: left;
+      text-transform: uppercase;
+      width: 75%;
+    }
+
+    a {
+      color: $covid-white;
+      font-size: 20px;
+      font-size: 1.2vw;
+
+      &:hover {
+        color: $covid-organge;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.9vw;
+    margin: $space-10 auto;
+    margin: 3.7vh auto;
+    text-transform: uppercase;
+  }
+
+  &__column {
+    padding: $space-4;
+    padding: 1.42vh;
+    width: 30%;
+
+    h3 {
+      color: $covid-organge;
+      font-size: 1.4vw;
+      margin: 2.4vh auto;
+    }
+  }
+
+  &__circle {
+    background-color: $covid-dark-gray;
+    border: 2px solid $covid-gray;
+    border-radius: 50%;
+    margin: auto;
+    max-height: 300px;
+    max-width: 300px;
+    width: 15.7vw;
+  }
+
+  &__text {
+    font-size: 18px;
+    font-size: 0.96vw;
+  }
+}
+
+@media (max-width: 750px) {
+
+  .home {
+    margin: 0px auto $space-8;
+    margin: 0px auto 2.9vh;
+
+    &__container {
+      padding-top: 5vh;
+    }
+
+    &__title {
+      font-size: 8vw;
+      margin: $space-4 auto 0;
+    }
+
+    &__lang {
+      margin-right: $space-3;
+  
+      a {
+        font-size: 20px;
+      }
+
+      img {
+        height: 20px;
+      }
+    }
+
+    &__section {
+      margin: $space-6 $space-2 auto;
+    }
+
+    &__paragraph {
+      font-size: 20px;
+      margin: 4rem auto $space-12;
+      text-align: justify;
+      width: 98%;
+    }
+
+    &__row {
+      flex-direction: column;
+      width: calc(100% - $space-4);
+    }
+
+    &__button, &__info {
+      padding: 0;
+      text-align: unset;
+      width: 100%;
+
+      button {
+        float: unset;
+        width: 100%;
+      }
+
+      a {
+        font-size: 4.6vw;
+      }
+    }
+
+    &__subtitle {
+      font-size: 7.7vw;
+      margin: $space-10 auto;
+    }
+
+    &__column {
+      padding: $space-4;
+      width: 100%;
+  
+      h3 {
+        font-size: 7vw;
+        margin-bottom: $space-2;
+      }
+    }
+
+    &__circle {
+      width: 75%;
+    }
+
+    &__text {
+      font-size: 4.96vw;
+      margin-top: $space-2;
+    }
+  }
+}

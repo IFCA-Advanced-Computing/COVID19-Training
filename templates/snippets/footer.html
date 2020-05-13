@@ -1,0 +1,23 @@
+<footer class="footer">
+  {% block footer %}
+  <a
+    class="footer__link"
+    href="{{ g.language }}/about"
+  >
+    {{ _('footer.about') }}
+  </a>
+  <p class="footer__separator">&nbsp;&nbsp;|&nbsp;&nbsp;</p>
+  {{ _('footer.terms-and-conditions') }}
+  <p class="footer__separator">&nbsp;&nbsp;|&nbsp;&nbsp;</p>
+  <a
+    class="footer__link"
+    href="mailto:covid19training@ifca.unican.es"
+  >
+    {{ _('footer.contact-us') }}
+  </a>
+  <p class="footer__separator">&nbsp;&nbsp;|&nbsp;&nbsp;</p>
+  <p class="footer__copyright">
+    {{ _('footer.copyright') }}
+  </p>
+  {% endblock %}
+</footer>

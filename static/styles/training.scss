@@ -1,0 +1,142 @@
+@import "common";
+
+.training {
+  display: flex;
+
+  &__actions {
+    width: 35%;
+    padding: $space-3;
+  }
+
+  &__data {
+    p {
+      margin: unset;
+    }
+  }
+
+  &__end {
+    margin-bottom: $space-4;
+
+    button {
+      width: 100%;
+    }
+  }
+
+  &__container {
+    background-color: $covid-dark-gray;
+    border: 2px solid $covid-gray;
+    border-radius: 4px;
+    padding: $space-4;
+  }
+
+  &__next {
+    margin-top: $space-8;
+    width: 100%;
+  }
+
+  &__images--desktop {
+    border: 1px solid $covid-light-gray;
+    border-radius: 4px;
+    display: unset;
+    margin: $space-3;
+    width: 65%;
+
+    img {
+      border: 1px solid $covid-light-gray;
+      border-radius: 4px;
+      width:100%;
+      height:100%;
+    }
+  }
+
+  &__images--mobile {
+    display: none;
+  }
+}
+
+.zoom parent-zoom {
+  height: auto;
+  width: auto;
+}
+
+label {
+  font-size: 20px;
+}
+
+#type_of_diag {
+  font-size: 14px;
+  width: 100%;
+}
+
+@media (max-width: 750px) {
+  .page-wrapper .content .training {
+    padding: unset;
+  }
+
+  .training {
+    flex-direction: column-reverse;
+
+    &__actions {
+      display: flex;
+      flex-direction: column-reverse;
+      margin-left: -$space-4;
+      margin-right: -$space-4;
+      padding: unset;
+      width: unset;
+    }
+
+    &__images--mobile {
+      border: unset;
+      border-radius: unset;
+      display: unset;
+      margin: -$space-4 -$space-4 -6px -$space-4;
+      width: unset;
+  
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  
+    &__images--desktop {
+      display: none;
+    }
+
+    &__container {
+      background-color: $covid-dark-gray;
+      border: unset;
+      border-top: 2px solid $covid-gray;
+      border-bottom: 2px solid $covid-gray;
+      border-radius: unset;
+      padding: $space-4;
+    }
+
+    &__data {
+      display: flex;
+
+      .field {
+        font-size: 6.4vw;
+        width: 50%;
+
+        strong {
+          color: $covid-organge;
+          font-weight: bold;
+        }
+      }
+    }
+
+    &__select label {
+      float: left;
+    }
+
+    &__end {
+      margin: $space-2 0;
+      padding: $space-4;
+    }
+  }
+
+  #type_of_diag {
+    font-size: 4.45vw;
+    margin: 0;
+  }
+}

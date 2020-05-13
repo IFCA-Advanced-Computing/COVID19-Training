@@ -1,0 +1,55 @@
+@import "common";
+
+.home-button {
+  background-color: transparent;
+  border: none;
+  color: $covid-white;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: $space-6;
+  margin-left: $space-2;
+  outline: none;
+
+  &:hover {
+    color: $covid-organge;
+
+    svg path,
+    svg polygon,
+    svg rect {
+      fill: $covid-organge;
+    }
+  }
+
+  &__wrapper {
+    align-items: center;
+    background-color: $covid-dark-gray;
+    border-bottom: 2px solid $covid-gray;
+    display: flex;
+    height: 3.5rem;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  svg {
+    width: 1em;
+    height: 1em;
+  }
+  
+  svg path,
+  svg polygon,
+  svg rect {
+    fill: $covid-white;
+  }
+}
+
+@media (max-width: 750px) {
+  .home-button {
+    padding: 0;
+
+    &__wrapper {
+      border-bottom-width: 1px;
+    }
+  }
+}

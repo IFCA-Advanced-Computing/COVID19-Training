@@ -1,0 +1,77 @@
+@import "common";
+
+.login {
+  &__label {
+    margin-top: $space-8;
+  }
+
+  &__button {
+    margin: $space-4 auto;
+    position: relative;
+    width: 50%;
+
+    button {
+      width: 100%;
+    }
+  }
+
+  &__error {
+    background-color: #C54842;
+    color: $covid-white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: $space $space-4;
+    text-align: left;
+    margin: 0 $space;
+    visibility: hidden
+  }
+  
+  &__terms {
+    margin: $space-8 $space-4 $space-4;
+    font-size: 14px;
+
+    &__checkbox {
+      width: $space-4;
+      height: $space-4;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+
+  .login {
+    padding: $space-4;
+
+    &__label {
+      margin-top: $space-12;
+      font-size: 5.8vw;
+    }
+
+    &__button {
+      margin: $space-6 auto;
+      width: unset;
+    }
+
+    &__error {
+      font-size: 4vw;
+      margin: 0;
+      padding: $space $space $space $space-2;
+    }
+
+    &__terms {
+      margin: unset;
+      display: flex;
+      align-items: center;
+  
+      &__checkbox {
+        width: $space-4;
+        height: $space-4;
+      }
+
+      label {
+        font-size: 4.4vw;
+        margin-left: $space;
+      }
+    }
+  }
+}

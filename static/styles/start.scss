@@ -1,0 +1,96 @@
+@import "common";
+
+.start {
+  &__title {
+    color: $covid-organge;
+    text-transform: uppercase;
+  }
+
+  &__user-speciality {
+    button {
+      margin: $space-2 auto;
+    }
+  }
+
+  &__select {
+    margin: auto;
+    width: 50%;
+
+    select {
+      margin-bottom: $space-4;
+      width: 100%;
+    }
+
+    label {
+      display: none;
+    }
+  }
+
+  &__button {
+    margin: $space-4 auto;
+    position: relative;
+    width: 50%;
+
+    button {
+      width: 100%;
+    }
+  }
+
+  &__error {
+    background-color: #C54842;
+    color: $covid-white;
+    font-size: 12px;
+    font-weight: bold;
+    left: 3px;
+    position: absolute;
+    top: 36px;
+  }
+
+  &__logout {
+    color: $covid-clear-gray;
+    font-size: 14px;
+    a {
+      color: $covid-organge;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .start {
+    padding: $space-4;
+
+    &__title {
+      font-size: 9.2vw;
+    }
+
+    &__label {
+      font-size: 5.5vw;
+      text-align: justify;
+    }
+
+    &__select {
+      width: 100%;
+
+      select {
+        margin-bottom: $space-2;
+      }
+    }
+
+    &__button {
+      width: unset;
+    }
+
+    &__logout {
+      font-size: 3.75vw;
+
+      strong {
+        color: $covid-white;
+      }
+    }
+  }
+}

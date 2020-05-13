@@ -1,0 +1,50 @@
+@import "common";
+
+.footer {
+  background-color: #191919;
+  border-top: 2px solid $covid-gray;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  height: $space-9;
+  justify-content: center;
+  margin-top: auto;
+  padding-top: $space-4;
+  width: 100%;
+
+  &__link {
+    color: $covid-white;
+    text-decoration: none;
+
+    &:hover {
+      color: $covid-organge;
+      text-decoration: underline;
+    }
+  }
+
+  &__separator, &__copyright {
+    margin: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .footer {
+    background-color: #191919;
+    border-top: 2px solid $covid-gray;
+    flex-direction: column;
+    height: 7rem;
+    padding-top: $space-3;
+
+    &__separator {
+      display: none;
+    }
+
+    &__link {
+      margin: $space;
+    }
+
+    &__copyright {
+      margin: $space 0 $space-3;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+{% block title %}{{ _('login.block-title') }}{% endblock %}
+{% block head %}
+  {{ super() }}
+  <script src="{{ url_for('static',filename='controller/login.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+{% include "snippets/back-button.html" %}
+  <div class="content login">
+    {% include "snippets/avatar.html" %}
+    <div class="login__label">
+      {{ _('login.label') }}
+    </div>
+    <div class="login__button">
+      <button class="covid-button" onclick="onLogin()">
+        {{ _('login.button') }}
+      </button>
+      <p class="login__error" id="error">{{ _('login.button-error') }}</p>
+    </div>
+    <div class="login__terms">
+      <input
+        class="login__terms__checkbox"
+        type="checkbox"
+        id="terms"
+        onclick="checkTerms()"
+      >
+      <label for="terms">
+        {{ _('login.terms-and-conditions.label') }}
+      </label>
+    </div>
+  </div>
+{% endblock %}

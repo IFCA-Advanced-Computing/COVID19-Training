@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+{% block title %}{{ _('about.block-title') }}{% endblock %}
+
+{% block content %}
+{% include "snippets/back-button.html" %}
+<div class="about">
+  <div class="about__title">
+    <h2>{{ _('about.title') }}</h2>
+  </div>
+  <div class="about__row">
+    <div class="about__column">
+      <h4>{{ _('about.paragraph.development.title') }}</h4>
+  
+      <p class="about__paragraph">{{ _('about.paragraph.development.content') }}</p>
+    </div>
+    <div class="about__column">
+      <h4>{{ _('about.paragraph.purpose.title') }}</h4>
+  
+      <p class="about__paragraph">{{ _('about.paragraph.purpose.content') }}</p>
+    </div>
+    <div class="about__column">
+      <h4>{{ _('about.paragraph.dedications.title') }}</h4>
+  
+      <p class="about__paragraph">{{ _('about.paragraph.dedications.content') }}</p>
+    </div>
+  </div>
+</div>
+{% endblock %}

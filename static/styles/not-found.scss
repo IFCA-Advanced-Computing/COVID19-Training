@@ -1,0 +1,39 @@
+@import "common";
+
+.not-found {
+  &__title {
+    align-items: center;
+    display: flex;
+    font-size: 5vw;
+    font-weight: bolder;
+    justify-content: center;
+
+    .error-404 {
+      color: $covid-organge;;
+    }
+  }
+
+  &__subtitle {
+    color: $covid-clear-gray;
+  }
+
+  &__button {
+    width: 75%;
+    margin: 10rem auto $space-8
+  }
+}
+
+@media (max-width: 750px) {
+  .not-found {
+    &__title {
+      font-size: 15vw;
+    }
+  
+    &__button {
+      bottom: 1$space-8;
+      margin: unset;
+      position: absolute;
+      width: calc(100% - $space-8);
+    }
+  }
+}

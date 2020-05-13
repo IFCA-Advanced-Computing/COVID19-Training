@@ -1,0 +1,72 @@
+{% extends 'index.html' %}
+{% block title %}{{ _('home.block-title') }}{% endblock %}
+
+{% block content %}
+<div class="home">
+  <div class="home__container">
+    <div class="home__lang">
+      {{ _('home.lang-switch') }}&nbsp;
+      {% if g.language=='es' %}
+        <img src="{{ url_for('static',filename='assets/flag_en.svg') }}" alt="flag_en">
+      {% else %}
+        <img src="{{ url_for('static',filename='assets/flag_es.svg') }}" alt="flag_es">
+      {% endif%}
+    </div>
+    <div class="home__section">
+      <h1 class="home__title">{{ _('home.title') }}</h1>
+      <p class="home__paragraph">{{ _('home.paragraph') }}</p>
+      <div class="home__row">
+        <div class="home__button">
+          <button
+            class="covid-button"
+            onclick="document.location.href = '/login'"
+          >
+            {{ _('home.login-button') }}
+          </button>
+        </div>
+        <div class="home__info">
+          {{ _('home.info-link') }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="home__section">
+    <h2 class="home__subtitle">{{ _('home.subtitle') }}</h2>
+    <div class="home__row">
+      <div class="home__column">
+        <div class="home__circle">
+          <img 
+            src="{{ url_for('static',filename='assets/doctor.png') }}"
+            alt="doctor"
+            class="doctor"
+          >
+        </div>
+        <h3>{{ _('home.column.medical-doctor.title') }}</h3>
+        <p class="home__text">{{ _('home.column.medical-doctor.content') }}</p>
+      </div>
+      <div class="home__column">
+        <div class="home__circle">
+          <img
+            src="{{ url_for('static',filename='assets/radiologist.png') }}"
+            alt="radiologist"
+            class="radiologist"
+          >
+        </div>
+        <h3>{{ _('home.column.radiologist.title') }}</h3>
+        <p class="home__text">{{ _('home.column.radiologist.content') }}</p>
+      </div>
+      <div class="home__column">
+        <div class="home__circle">
+          <img 
+            src="{{ url_for('static',filename='assets/student.png') }}"
+            alt="student"
+            class="student"
+          >
+        </div>
+        <h3>{{ _('home.column.student.title') }}</h3>
+        <p class="home__text">{{ _('home.column.student.content') }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends 'index.html' %}
+{% block title %}{{ _('training.block-title') }}{% endblock %}
+{% block head %}
+
+  {{ super() }}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script src="https://www.jose-aguilar.com/scripts/jquery/zoomy/zoomy.min.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $('.zoom').zoomy();
+    });
+  </script>
+{% endblock %}
+
+{% block content %}
+{% include "snippets/back-button.html" %}
+<div class="content training">
+  <div class="training__actions">
+    <div class="training__end" >
+      <button
+        class="covid-button"
+        onclick="document.location.href = '/results'"
+      >
+        {{ _('training.end-button') }}
+      </button>
+    </div>
+    <div class="training__container">
+      <form action="/send_results" method="POST">
+        {{ form.csrf_token }}
+        <div class="training__data">
+          <p class="field">{{ _('training.sex.label') }}&nbsp;{{ _(sex) }}</p>
+          <p class="field">{{ _('training.age.label') }}&nbsp;{{ age }}</p>
+        </div>
+        <div class="training__select">
+          <br>{{ form.type_of_diag.label }}
+          <br>{{ form.type_of_diag }}
+        </div>
+        <button
+          class="training__next secondary-button"
+          type="submit"
+          name="button_next"
+        >
+          {{ _('training.next-button') }}
+        </button>
+      </form>
+    </div>
+  </div>    
+    
+  <div class="training__images--desktop">
+    <a href={{ img }} class="zoom">
+      <img src={{ img }} alt={{ img_id }} width="150" height="200"/>
+    </a>
+  </div>
+  <div class="training__images--mobile">
+    <img src={{ img }} alt={{ img_id }} width="150" height="200"/>
+  </div>
+</div>
+{% endblock %}

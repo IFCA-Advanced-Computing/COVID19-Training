@@ -1,0 +1,13 @@
+@import "common";
+
+.avatar {
+  height: 122px;
+  margin-top: $space-4;
+
+  &__image {
+    border: 1px solid grey;
+    border-radius: 8px;
+    height: 120px;
+    width: 120px;
+  }
+}
